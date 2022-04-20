@@ -1,4 +1,4 @@
-# snap recipe for grafana
+# Snap porting for Grafana 8
 
 ## Building and Installing
 
