@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "id": "grafana-monitoring",
+  "services": {
+    "proxyMapping": [
+      {
+        "name": "grafanau",
+        "url": "/grafanau",
+        "binding": ":3125",
+        "restricted": [
+        ]        
+      }
+    ]
+  },
+  "menus": {
+    "sidebar": [
+      {
+        "id": "grafanaua",
+        "title": "Grafana U",
+        "icon": "bosch-ic-desktop-graph",
+        "link": "/grafanau/"
+      }
+    ],
+    "settings": [
+    ],
+    "overview": [
+      {
+        "id": "grafanau",
+        "title": "Grafana U",
+        "icon": "bosch-ic-desktop-graph",
+        "link": "/grafanau/"
+      }
+    ]    
+  }
+}

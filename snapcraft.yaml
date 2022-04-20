@@ -1,0 +1,54 @@
+name: grafana-8-u
+version: 8.2.4
+summary: feature rich metrics dashboard and graph editor
+base: core20
+description: |
+  LICENSE: read carrefully the file LICENSE.md 
+
+confinement: strict
+grade: stable
+architectures:
+  - build-on: arm64
+  - build-on: amd64
+
+apps:
+  grafana:
+    command: 'bin/grafana.wrapper'
+    plugs: [network-bind, network]
+    daemon: simple
+
+  grafana-cli:
+    command: 'bin/grafana-cli.wrapper'
+    plugs: [network-bind, network]
+
+
+slots:
+  package-assets:
+    content: package-assets
+    interface: content
+    source:
+      read:
+      - $SNAP/bin/package-assets/grafanau
+      
+parts:
+  snap-wrappers:
+    plugin: dump
+    source: bin
+    organize:
+      grafana.wrapper: bin/grafana.wrapper
+      grafana-cli.wrapper: bin/grafana-cli.wrapper
+      grafana.ini: usr/share/grafana/conf/grafana.ini
+      
+  
+  shscripts:  
+    source: conf
+    plugin: dump
+    organize:
+      '*': bin/
+  grafana:
+    plugin: dump
+    source:
+         - on amd64: https://dl.grafana.com/oss/release/grafana_8.2.4_amd64.deb
+         - on arm64: https://dl.grafana.com/oss/release/grafana_8.2.4_arm64.deb
+    stage-packages: [libfontconfig1, libfreetype6]
+
