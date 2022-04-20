@@ -3,6 +3,9 @@
 Check the original repo: https://github.com/grafana/grafana
 
 ## Changes 
+
+Serving by default on port 3125
+
 This version of Grafana is created directly from the official grafana .deb file and include the possibility to be fully embedded in 
 the ctrlX automation stack. https://github.com/boschrexroth
 
