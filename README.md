@@ -1,5 +1,8 @@
 # Snap porting for Grafana 8
 
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/grafana-8-u)
+
+
 Check the original repo: https://github.com/grafana/grafana
 
 ## Changes 
