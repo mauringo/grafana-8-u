@@ -28,7 +28,7 @@ slots:
     interface: content
     source:
       read:
-      - $SNAP/bin/package-assets/grafanau
+      - $SNAP/bin/package-assets/grafana-8-u
       
 parts:
   snap-wrappers:
