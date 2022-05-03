@@ -1,5 +1,5 @@
 name: grafana-8-u
-version: 8.2.4
+version: 8.5.1
 summary: feature rich metrics dashboard and graph editor
 base: core20
 description: |
@@ -48,7 +48,7 @@ parts:
   grafana:
     plugin: dump
     source:
-         - on amd64: https://dl.grafana.com/oss/release/grafana_8.2.4_amd64.deb
-         - on arm64: https://dl.grafana.com/oss/release/grafana_8.2.4_arm64.deb
+         - on amd64: https://dl.grafana.com/oss/release/grafana_8.5.1_amd64.deb
+         - on arm64: https://dl.grafana.com/oss/release/grafana_8.5.1_arm64.deb
     stage-packages: [libfontconfig1, libfreetype6]
 
