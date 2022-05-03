@@ -19,3 +19,6 @@ the ctrlX automation stack. https://github.com/boschrexroth
 2. `cd grafana-8-u`
 3. `snapcraft build`
 4. `sudo snap install snapname.snap --dangerous`
+
+
+
